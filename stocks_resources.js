@@ -1,9 +1,7 @@
-var express = require('express');
-var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
-var app     = express();
 var async   = require('async');
+var logger = require('./lib/logger').getLogger('stocks_resources');
 
 var URLS = ['http://www.aastocks.com/tc/ipo/ListedIPO.aspx',       
     'http://www.aastocks.com/tc/ipo/ListedIPO.aspx?iid=ALL&orderby=DA&value=DESC&index=2',
@@ -14,10 +12,10 @@ var URLS = ['http://www.aastocks.com/tc/ipo/ListedIPO.aspx',
     'http://www.aastocks.com/tc/ipo/ListedIPO.aspx?iid=ALL&orderby=DA&value=DESC&index=7',
     'http://www.aastocks.com/tc/ipo/ListedIPO.aspx?iid=ALL&orderby=DA&value=DESC&index=8',
     'http://www.aastocks.com/tc/ipo/ListedIPO.aspx?iid=ALL&orderby=DA&value=DESC&index=9'];
-
 var MAX_OVERSCRIBED = 500.0;  // high overscription cases are omitted for illustration purpose on scatter chart
 
-app.get('/stocks', function(req, res){
+module.exports = {
+  middleWare: function(req, res, next){
     var entries = [];
     
     async.map(URLS, function(url, cb) {
@@ -64,9 +62,8 @@ app.get('/stocks', function(req, res){
           });
         }
         res.send(retObj || mergedResults);
+        logger.info("Done handling request method="+req.method+" url="+req.url);
+        next();
     });
-})
-
-app.listen('8081')
-console.log('Listening to port 8081');
-exports = module.exports = app;
+  }
+}

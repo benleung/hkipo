@@ -2,16 +2,14 @@
   "name": "ipo",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "main": "kernel.js",
+  "author": "Ben Leung",
   "license": "ISC",
   "dependencies": {
     "async": "^0.9.0",
     "cheerio": "latest",
     "express": "latest",
-    "request": "latest"
+    "request": "latest",
+    "winston": "^1.0.0"
   }
 }
