@@ -3,21 +3,20 @@ $(document).ready(function () {
     var chart = new CanvasJS.Chart("chartContainer",
     {
       title:{
-        text: "1st Day Performance of Initial Public Offering (IPO) of HK stocks",      
+        text: "1st Day Changed of Initial Public Offering (IPO) of HK stocks",      
         fontFamily: "arial black",
         fontColor: "DarkSlateGrey",
         fontSize: 30
       },
-      animationEnabled: true,
       axisX: {
         title: "Oversubscription Rate",
         titleFontFamily: "arial",
         titleFontSize: 20
       },
       axisY:{
-        title: "1st Day Changed",
+        title: "1st Day Changed (%)",
         titleFontFamily: "arial",
-        //valueFormatString:"0 USD",
+        valueFormatString:"#%",
         titleFontSize: 20
       },
       data: [
@@ -28,6 +27,8 @@ $(document).ready(function () {
       }
       ]
     });
+    $("#scatterChartLoader").addClass("hide");
+    $("#chartContainer").removeClass("hide");
     chart.render();
   });
 });

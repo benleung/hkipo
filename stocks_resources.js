@@ -12,7 +12,7 @@ var URLS = ['http://www.aastocks.com/tc/ipo/ListedIPO.aspx',
     'http://www.aastocks.com/tc/ipo/ListedIPO.aspx?iid=ALL&orderby=DA&value=DESC&index=7',
     'http://www.aastocks.com/tc/ipo/ListedIPO.aspx?iid=ALL&orderby=DA&value=DESC&index=8',
     'http://www.aastocks.com/tc/ipo/ListedIPO.aspx?iid=ALL&orderby=DA&value=DESC&index=9'];
-var MAX_OVERSCRIBED = 500.0;  // high overscription cases are omitted for illustration purpose on scatter chart
+var MAX_OVERSCRIBED = 2000.0;  // high overscription cases are omitted for illustration purpose on scatter chart
 
 module.exports = {
   middleWare: function(req, res, next){
