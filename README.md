@@ -1,2 +1,2 @@
 # ipo.svc.source
-An API for retrieving IPO source data from aastock
+An interactive graph to visualize the relationship between rate of oversubscription and performance of stock of IPO price on the first day
