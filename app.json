@@ -1,0 +1,6 @@
+{
+  "name": "HK IPO Analytical Tool",
+  "description": "An interactive graph to visualize the relationship between performance of stocks and oversubscription rate",
+  "repository": "https://github.com/benleung/hkipo",
+  "keywords": ["node", "express"]
+}
