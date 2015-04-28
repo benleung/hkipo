@@ -10,6 +10,6 @@ app.get('/stocks', stocksMiddleware)
 app.use('/assets',express.static('assets'));
 // End of rounting
 
-app.listen('8080');
+app.listen(process.env.PORT || 8080);
 logger.info('Listening to port 8080');
 exports = module.exports = app;
