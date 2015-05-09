@@ -34,6 +34,6 @@ $(document).ready(function () {
     })
     .fail(function() {
       $("#scatterChartLoader").addClass("hide");
-      $("body").append("<span class='error-message'>error: unsuccessful to retrieve data, please try again :(</span>");
+      $("body").append("<p class='error-message'>error: unsuccessful to retrieve data, please try again :(</p>");
     });
 });
