@@ -15,7 +15,7 @@ module.exports = {
         var ticker, company, ipoPrice, listingDate, applyDate;
 
         $("#rpt0 .DR, #rpt0 .ADR").each(function(i,elem){
-            ticker = $(this).children().eq(1).children("a").text().trim();
+            ticker = $(this).children().eq(1).children("a").text().trim().replace(".HK","");
             company = $(this).children().eq(2).text().trim();
             ipoPrice = $(this).children().eq(4).text().trim();
             applyDate = $(this).children().eq(8).text().trim();
