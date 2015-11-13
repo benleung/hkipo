@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE HTML>
 <html ng-app="dashboardApp">
-<head>  
-  <!--TODO:do some seo stuff, canonical link, description-->
+<head>
   <meta name="keywords" content="香港新股,分析,Hong Kong Stocks, IPO, Analysis, Scatter Chart">
   
+  <link rel="stylesheet" type="text/css" href="/assets/style.css">
   <link rel="stylesheet" type="text/css" href="/assets/dashboard.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
@@ -51,7 +51,8 @@
             </tr>
           </tbody>
       </table>
-      <p style="position:absolute; bottom: 10px;">股票資料取自互聯網，如有侵權請通知</p>
+      <div id="dashboardLoader" class="loader" ng-class="{hide: dashboard.hide}">Loading...</div>
+      <p style="margin-top:50px">股票資料取自互聯網，如有侵權請通知</p>
     </div>
 </body>
 </html>

@@ -19,10 +19,13 @@ html,body {
 }
 
 /*loader*/
-.loader {
+#scatterChartLoader {
   margin: 6em auto;
   top: 50%;
   margin-top: -5em;
+}
+
+.loader {
   font-size: 10px;
   position: relative;
   text-indent: -9999em;
