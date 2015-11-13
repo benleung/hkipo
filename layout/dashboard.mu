@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="/assets/style.css">
   <link rel="stylesheet" type="text/css" href="/assets/dashboard.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
   <script src="/assets/dashboard.js"></script>
   <title>香港新股 - Dashboard</title>
@@ -27,7 +28,7 @@
           <tbody>
           {{#upcomings}}
             <tr>
-              <td scope="row"><a href="" ng-click="dashboard.query({{ticker}})"> {{ticker}}</a></td>
+              <td scope="row"><a href="" ng-click="dashboard.query({{ticker}})"> {{ticker}}</a> <a target="_blank" href="/oversubscribe?ticker={{ticker}}"><i class="fa fa-external-link"></i></a></td>
               <td>{{company}}</td>
               <td>{{applyDate}}</td>
               <td>{{listingDate}}</td>
@@ -52,7 +53,7 @@
           </tbody>
       </table>
       <div id="dashboardLoader" class="loader" ng-class="{hide: dashboard.hide}">Loading...</div>
-      <p style="margin-top:50px">股票資料取自互聯網，如有侵權請通知</p>
+      <p style="margin-top:50px">股票資料取自互聯網，如有侵權請通知. <a style="color:black" href="https://github.com/benleung/hkipo"><i class="fa fa-github"></i></a></p>
     </div>
 </body>
 </html>
