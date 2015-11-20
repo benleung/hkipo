@@ -40,7 +40,7 @@ module.exports = {
             retObj.date = new Date(d[0]).toString();
             retObj.title = d[1];
             retObj.url = "http://www.infocastfn.com/fn/ajax/news/newsDetail?newsId="+d[2];
-            if(/\u5B56\u5C55\u8A8D\u8CFC\u4E00\u89BD/.test(retObj.title)) // 孖展認購一覽
+            if(/\u5B56\u5C55.*\u4E00\u89BD/.test(retObj.title)) // 孖展認購一覽
               retObjs.push(retObj);
           });
           res.send(retObjs);
