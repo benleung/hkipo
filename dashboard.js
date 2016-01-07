@@ -4,6 +4,7 @@ var upcomingService = require('./upcoming_service');
 
 module.exports = {
   middleWare: function(req, res, next){
+    res.setHeader('Cache-Control', 'public, max-age=86400');
     upcomingService.getUpcoming(function(upcomings){
       pageBuilder.renderLayout('dashboard',upcomings, function(layout){
         res.send(layout);
