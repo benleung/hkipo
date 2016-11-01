@@ -7,5 +7,6 @@ To run the app in your machine:
 2. `node kernel.js`
 3. Go to http://localhost:8080/
 
+
 ## Misc
-Note: This is a Node.js Apps on Heroku. 
+Note: This is a Node.js Apps on Heroku
