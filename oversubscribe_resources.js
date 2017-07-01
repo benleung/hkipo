@@ -13,7 +13,7 @@ module.exports = {
       strictSSL: false,
       contentType:'application/x-www-form-urlencoded',
       form: {
-        searchCriteria:'{"type":"FIN","stockCode":"'+ticker+'","grpCode":"NwsType"}',
+        searchCriteria:'{"type":"IPO","stockCode":"'+ticker+'","grpCode":"NwsType"}',
         bSortable_0:"true",
         bSortable_1:"true",
         bSortable_2:"true",
