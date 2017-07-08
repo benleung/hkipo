@@ -1,5 +1,5 @@
 # hkipo
-An interactive graph to visualize the relationship between rate of oversubscription and performance of stock of IPO price on the first day.
+An interactive graph to visualize the relationship between rate of oversubscription and performance of stock of IPO price on the first day. It also contains a dashboard for checking IPO's price.
 
 ## How to run the app in your machine
 To run the app in your machine:
